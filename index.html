@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DramaCina - Nonton Drama China Subtitle Indonesia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-brand">DramaCina</div>
+    <div class="nav-right">
+      <button class="search-btn" id="demoPlayBtn"><i class="fas fa-play"></i> Demo Stream</button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section hero-lite">
+      <h1>Website DramaCina sudah diintegrasikan</h1>
+      <p>
+        Streaming sekarang diputar di dalam website (modal player), support HLS `.m3u8`,
+        tetap ada opsi buka di tab baru, dan kompatibel dengan pola lama `app.playVideo(...)`.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" id="playPrimary"><i class="fas fa-play"></i> Coba Player Internal</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Contoh Episode DramaCina</h2>
+      <div class="ep-list">
+        <button class="btn btn-primary" data-stream-url="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" data-stream-title="DramaCina Episode 1">
+          <i class="fas fa-circle-play"></i> Putar Episode 1
+        </button>
+        <button class="btn btn-primary" data-stream-url="https://test-streams.mux.dev/test_001/stream.m3u8" data-stream-title="DramaCina Episode 2">
+          <i class="fas fa-circle-play"></i> Putar Episode 2
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast"><i class="fas fa-info-circle"></i><span id="toastTxt">Notifikasi</span></div>
+
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
