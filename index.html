@@ -9,39 +9,32 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
+  <div id="preloader"><div class="preloader-logo">DramaCina</div><div class="sp"></div></div>
+
   <nav id="navbar">
-    <div class="nav-brand">DramaCina</div>
-    <div class="nav-right">
-      <button class="search-btn" id="demoPlayBtn"><i class="fas fa-play"></i> Demo Stream</button>
+    <div class="nav-inner">
+      <div class="nav-brand" onclick="app.goHome()">DramaCina</div>
+      <div class="nav-links">
+        <button class="nav-link active" data-nav="home" onclick="app.goHome()"><i class="fas fa-home"></i> Beranda</button>
+        <button class="nav-link" data-nav="populer" onclick="app.showPopuler()"><i class="fas fa-fire"></i> Populer</button>
+        <button class="nav-link" data-nav="browse" onclick="app.showBrowse()"><i class="fas fa-th-large"></i> Jelajahi</button>
+        <button class="nav-link" data-nav="terbaru" onclick="app.showNew()"><i class="fas fa-star"></i> Terbaru</button>
+      </div>
+      <div class="nav-right">
+        <button class="search-btn" id="demoPlayBtn"><i class="fas fa-play"></i> Demo Stream</button>
+      </div>
     </div>
   </nav>
 
-  <main id="main">
-    <section class="section hero-lite">
-      <h1>Website DramaCina sudah diintegrasikan</h1>
-      <p>
-        Streaming sekarang diputar di dalam website (modal player), support HLS `.m3u8`,
-        tetap ada opsi buka di tab baru, dan kompatibel dengan pola lama `app.playVideo(...)`.
-      </p>
-      <div class="hero-buttons">
-        <button class="btn btn-primary" id="playPrimary"><i class="fas fa-play"></i> Coba Player Internal</button>
-      </div>
-    </section>
+  <div id="main"></div>
 
-    <section class="section">
-      <h2>Contoh Episode DramaCina</h2>
-      <div class="ep-list">
-        <button class="btn btn-primary" data-stream-url="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" data-stream-title="DramaCina Episode 1">
-          <i class="fas fa-circle-play"></i> Putar Episode 1
-        </button>
-        <button class="btn btn-primary" data-stream-url="https://test-streams.mux.dev/test_001/stream.m3u8" data-stream-title="DramaCina Episode 2">
-          <i class="fas fa-circle-play"></i> Putar Episode 2
-        </button>
-      </div>
-    </section>
-  </main>
+  <div id="dramaModal">
+    <button class="mod-close" onclick="app.closeModal()"><i class="fas fa-times"></i></button>
+    <div id="modalInner"></div>
+  </div>
 
   <div id="toast"><i class="fas fa-info-circle"></i><span id="toastTxt">Notifikasi</span></div>
+  <button id="btt" onclick="app.scrollToTop()"><i class="fas fa-chevron-up"></i></button>
 
   <script src="./assets/js/app.js"></script>
 </body>
